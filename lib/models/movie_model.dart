@@ -5,13 +5,14 @@ class MovieModel {
   String original_language;
   String original_title;
   String overview;
+  String poster_path;
 
   MovieModel({
     required this.id,
-    this.original_language,
-    this.original_title,
-    this.overview,
-    this.poster_path,
+    required this.original_language,
+    required this.original_title,
+    required this.overview,
+    required this.poster_path,
   });
 
   MovieModel.fromJson(Map<String, dynamic> json) {
@@ -25,11 +26,10 @@ class MovieModel {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'original_language': name,
-      'original_title': email,
-      'overview': username,
-      'poster_path': profilePhotoUrl,
-      'token': token,
+      'original_language': original_language,
+      'original_title': original_title,
+      'overview': overview,
+      'poster_path': poster_path,
     };
   }
 }
