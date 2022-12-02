@@ -6,7 +6,8 @@ import 'package:sribu_test/models/movie_model.dart';
 import 'package:http/http.dart' as http;
 
 class MovieList {
-  String baseUrl = 'https://shamo-backend.buildwithangga.id/api';
+  String baseUrl =
+      'https://api.themoviedb.org/3/movie/now_playing?api_key=api_key&language=en-US&page=1';
 
   Future<MovieModel> register({
     required String original_language,
