@@ -76,22 +76,22 @@ class _MainPageState extends State<MainPage> {
                 ),
                 label: '',
               ),
-              BottomNavigationBarItem(
-                icon: Container(
-                  margin: const EdgeInsets.only(
-                    top: 20,
-                    bottom: 10,
-                  ),
-                  child: Image.asset(
-                    'assets/details-icon.png',
-                    width: 20,
-                    color: currentIndex == 1
-                        ? primaryColor
-                        : const Color(0xff808191),
-                  ),
-                ),
-                label: '',
-              ),
+              // BottomNavigationBarItem(
+              //   icon: Container(
+              //     margin: const EdgeInsets.only(
+              //       top: 20,
+              //       bottom: 10,
+              //     ),
+              //     child: Image.asset(
+              //       'assets/details-icon.png',
+              //       width: 20,
+              //       color: currentIndex == 1
+              //           ? primaryColor
+              //           : const Color(0xff808191),
+              //     ),
+              //   ),
+              //   label: '',
+              // ),
               BottomNavigationBarItem(
                 icon: Container(
                   margin: const EdgeInsets.only(
@@ -210,11 +210,11 @@ class _MainPageState extends State<MainPage> {
           return HomePage();
           // ignore: dead_code
           break;
+        // case 1:
+        //   return const HomePage();
+        // ignore: dead_code
+        // break;
         case 1:
-          return const HomePage();
-          // ignore: dead_code
-          break;
-        case 2:
           return const ProfilePage();
           // ignore: dead_code
           break;
