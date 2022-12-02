@@ -286,6 +286,12 @@ class HomePage extends StatelessWidget {
             MovieTile(),
             MovieTile(),
             MovieTile(),
+            MovieTile(),
+            MovieTile(),
+            MovieTile(),
+            MovieTile(),
+            MovieTile(),
+            MovieTile(),
           ],
           // productProvider.products
           //     .map(

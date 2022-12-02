@@ -24,7 +24,7 @@ class _SplashPageState extends State<SplashPage> {
     // ignore: todo
     // TODO: implement initState
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds: 10),
       () => Navigator.pushNamed(context, '/home'),
     );
     return Timer;
