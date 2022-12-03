@@ -1,11 +1,12 @@
 // ignore_for_file: non_constant_identifier_names
 
 class MovieModel {
-  int id;
-  String original_language;
-  String original_title;
-  String overview;
-  String poster_path;
+  late int id;
+  late String original_language;
+  late String original_title;
+  late String overview;
+  late String poster_path;
+  late String token;
 
   MovieModel({
     required this.id,
@@ -13,6 +14,7 @@ class MovieModel {
     required this.original_title,
     required this.overview,
     required this.poster_path,
+    required this.token,
   });
 
   MovieModel.fromJson(Map<String, dynamic> json) {
@@ -30,6 +32,7 @@ class MovieModel {
       'original_title': original_title,
       'overview': overview,
       'poster_path': poster_path,
+      'token': token,
     };
   }
 }
