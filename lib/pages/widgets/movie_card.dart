@@ -42,10 +42,10 @@ class MovieCard extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          Image.network(
-            movie.poster_path,
-            // Image.asset(
-            //   'assets/black_adam.jpg',
+          // Image.network(
+          //   movie.poster_path,
+          Image.asset(
+            'assets/black_adam.jpg',
             width: 215,
             height: 150,
             fit: BoxFit.cover,

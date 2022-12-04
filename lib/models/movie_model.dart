@@ -6,6 +6,7 @@ class MovieModel {
   late String original_title;
   late String overview;
   late String poster_path;
+  late String release_date;
   // late String token;
 
   MovieModel({
@@ -14,6 +15,7 @@ class MovieModel {
     required this.original_title,
     required this.overview,
     required this.poster_path,
+    required this.release_date,
     // required this.token,
   });
 
@@ -23,6 +25,7 @@ class MovieModel {
     original_title = json['original_title'];
     overview = json['overview'];
     poster_path = json['poster_path'];
+    release_date = json['release_date'];
   }
 
   Map<String, dynamic> toJson() {
@@ -32,7 +35,12 @@ class MovieModel {
       'original_title': original_title,
       'overview': overview,
       'poster_path': poster_path,
+      'release_date': release_date,
       // 'token': token,
     };
   }
+}
+
+class UninitializedMovieModel extends MovieModel {
+  UninitializedMovieModel.fromJson(super.json) : super.fromJson();
 }

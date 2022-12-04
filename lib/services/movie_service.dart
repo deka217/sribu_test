@@ -24,7 +24,7 @@ class MovieService {
     print(response.body);
 
     if (response.statusCode == 200) {
-      List data = jsonDecode(response.body)['data']['data'];
+      List data = jsonDecode(response.body)['results'];
       List<MovieModel> movies = [];
 
       for (var item in data) {
@@ -33,7 +33,7 @@ class MovieService {
 
       return movies;
     } else {
-      throw Exception('Gagal Get Products!');
+      throw Exception('Failed Get Movie!');
     }
   }
 }

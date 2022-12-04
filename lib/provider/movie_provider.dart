@@ -17,6 +17,7 @@ class MovieProvider with ChangeNotifier {
       List<MovieModel> movies = await MovieService().getMovies();
       _movies = movies;
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }

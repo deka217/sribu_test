@@ -27,11 +27,12 @@ class MovieTile extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.network(
-                movie.poster_path,
+              child:
+                  // Image.network(
+                  //   movie.poster_path,
 
-                //   Image.asset(
-                // 'assets/black_adam.jpg',
+                  Image.asset(
+                'assets/black_adam.jpg',
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
@@ -70,8 +71,8 @@ class MovieTile extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    // '\$${product.price}',
-                    '2022-10-19',
+                    movie.release_date,
+                    // '2022-10-19',
                     style: priceTextStyle.copyWith(
                       fontWeight: medium,
                     ),

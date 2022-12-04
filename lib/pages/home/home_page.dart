@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sribu_test/pages/widgets/movie_card.dart';
 import 'package:sribu_test/pages/widgets/movie_tile.dart';
-// import 'package:shamo_flutter/http/http.dart';
 import 'package:sribu_test/theme.dart';
 import 'package:provider/provider.dart';
 import 'package:sribu_test/models/movie_model.dart';
-// import 'package:shamo/providers/auth_provider.dart';
 import 'package:sribu_test/provider/movie_provider.dart';
-// import 'package:shamo_flutter/theme.dart';
-import 'package:sribu_test/pages/widgets/movie_card.dart';
-// import 'package:shamo/widgets/product_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,8 +17,6 @@ class HomePage extends StatelessWidget {
     //     style: primaryTextStyle,
     //   ),
     // );
-    // AuthProvider authProvider = Provider.of<AuthProvider>(context);
-    // UserModel user = authProvider.user;
     // ignore: unused_local_variable
     MovieProvider movieProvider = Provider.of<MovieProvider>(context);
 
@@ -211,53 +204,6 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    // ignore: unused_element
-    // Widget popularProductsTitle() {
-    //   return Container(
-    //     margin: EdgeInsets.only(
-    //       top: defaultMargin,
-    //       left: defaultMargin,
-    //       right: defaultMargin,
-    //     ),
-    //     child: Text(
-    //       'Popular Products',
-    //       style: primaryTextStyle.copyWith(
-    //         fontSize: 22,
-    //         fontWeight: semiBold,
-    //       ),
-    //     ),
-    //   );
-    // }
-
-    // ignore: unused_element
-    // Widget popularProducts() {
-    //   return Container(
-    //     // ignore: prefer_const_constructors
-    //     margin: EdgeInsets.only(top: 14),
-    //     child: SingleChildScrollView(
-    //       scrollDirection: Axis.horizontal,
-    //       child: Row(
-    //         children: [
-    //           SizedBox(
-    //             width: defaultMargin,
-    //           ),
-    //           Row(children: [
-    //             MovieCard(),
-    //             MovieCard(),
-    //             MovieCard(),
-    //           ]
-    //               //     // productProvider.products
-    //               //     //     .map(
-    //               //     //       (product) => ProductCard(product),
-    //               //     //     )
-    //               //     //     .toList(),
-    //               ),
-    //         ],
-    //       ),
-    //     ),
-    //   );
-    // }
-
     Widget newArrivalsTitle() {
       return Container(
         margin: EdgeInsets.only(
@@ -289,7 +235,7 @@ class HomePage extends StatelessWidget {
               )
               .toList(),
           // [
-          //   MovieTile(),
+          // MovieTile(),
           //   MovieTile(),
           //   MovieTile(),
           //   MovieTile(),
