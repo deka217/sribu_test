@@ -14,14 +14,18 @@ class MovieService {
     var url = '$baseUrl/movies';
     var headers = {'Content-Type': 'application/json'};
 
-    var response = await http.get(Uri.parse(url, headers: headers));
+    var response = await http.get(
+      Uri.parse(url),
+      headers: headers,
+    );
+    // ignore: unused_label
 
     // ignore: avoid_print
     print(response.body);
 
     if (response.statusCode == 200) {
       List data = jsonDecode(response.body)['data']['data'];
-      List<MoviesModel> movies = [];
+      List<MovieModel> movies = [];
 
       for (var item in data) {
         movies.add(MovieModel.fromJson(item));

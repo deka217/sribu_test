@@ -21,9 +21,9 @@ class DetailMovie extends StatefulWidget {
 
 class _DetailMovieState extends State<DetailMovie> {
   List images = [
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
-    'assets/image_shoes.png',
+    'assets/shoes1.png',
+    'assets/shoes1.png',
+    'assets/shoes1.png',
   ];
 
   List familiarShoes = [
