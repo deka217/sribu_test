@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-// import 'package:shamo/models/product_model.dart';
+import 'package:sribu_test/models/movie_model.dart';
 // import 'package:shamo/pages/product_page.dart';
 import 'package:sribu_test/theme.dart';
 
 // ignore: use_key_in_widget_constructors
 class MovieCard extends StatelessWidget {
-  // final ProductModel product;
-  // ProductCard(this.product);
+  final MovieModel movie;
+  // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
+  MovieCard(this.movie);
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +42,10 @@ class MovieCard extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          // Image.network(
-          // product.galleries[0].url,
-          Image.asset(
-            'assets/black_adam.jpg',
+          Image.network(
+            movie.poster_path,
+            // Image.asset(
+            //   'assets/black_adam.jpg',
             width: 215,
             height: 150,
             fit: BoxFit.cover,
@@ -57,8 +58,8 @@ class MovieCard extends StatelessWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
-                // product.category.name,
-                'Hiking',
+                movie.original_title,
+                // 'Hiking',
                 style: secondaryTextStyle.copyWith(
                   fontSize: 12,
                 ),

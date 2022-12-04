@@ -6,7 +6,7 @@ class MovieModel {
   late String original_title;
   late String overview;
   late String poster_path;
-  late String token;
+  // late String token;
 
   MovieModel({
     required this.id,
@@ -14,7 +14,7 @@ class MovieModel {
     required this.original_title,
     required this.overview,
     required this.poster_path,
-    required this.token,
+    // required this.token,
   });
 
   MovieModel.fromJson(Map<String, dynamic> json) {
@@ -32,7 +32,7 @@ class MovieModel {
       'original_title': original_title,
       'overview': overview,
       'poster_path': poster_path,
-      'token': token,
+      // 'token': token,
     };
   }
 }

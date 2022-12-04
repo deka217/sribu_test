@@ -3,12 +3,12 @@ import 'package:sribu_test/pages/widgets/movie_card.dart';
 import 'package:sribu_test/pages/widgets/movie_tile.dart';
 // import 'package:shamo_flutter/http/http.dart';
 import 'package:sribu_test/theme.dart';
-// import 'package:provider/provider.dart';
-// import 'package:shamo/models/user_model.dart';
+import 'package:provider/provider.dart';
+import 'package:sribu_test/models/movie_model.dart';
 // import 'package:shamo/providers/auth_provider.dart';
-// import 'package:shamo/providers/product_provider.dart';
+import 'package:sribu_test/provider/movie_provider.dart';
 // import 'package:shamo_flutter/theme.dart';
-// import 'package:shamo/widgets/product_card.dart';
+import 'package:sribu_test/pages/widgets/movie_card.dart';
 // import 'package:shamo/widgets/product_tile.dart';
 
 class HomePage extends StatelessWidget {
@@ -24,7 +24,8 @@ class HomePage extends StatelessWidget {
     // );
     // AuthProvider authProvider = Provider.of<AuthProvider>(context);
     // UserModel user = authProvider.user;
-    // ProductProvider productProvider = Provider.of<ProductProvider>(context);
+    // ignore: unused_local_variable
+    MovieProvider movieProvider = Provider.of<MovieProvider>(context);
 
     // ignore: unused_element
     Widget header() {
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Text(
                       // '@${user.username}',
-                      '@assep',
+                      '@user',
 
                       style: subtitleTextStyle.copyWith(
                         fontSize: 16,
@@ -282,17 +283,22 @@ class HomePage extends StatelessWidget {
         ),
 
         child: Column(
-          children: [
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-            MovieTile(),
-          ],
+          children: movieProvider.movies
+              .map(
+                (movie) => MovieTile(movie),
+              )
+              .toList(),
+          // [
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          //   MovieTile(),
+          // ],
           // productProvider.products
           //     .map(
           //       (product) => ProductTile(product),

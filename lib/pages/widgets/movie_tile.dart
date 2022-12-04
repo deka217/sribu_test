@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sribu_test/theme.dart';
-// import 'package:shamo/models/product_model.dart';
+import 'package:sribu_test/models/movie_model.dart';
 // import 'package:shamo/pages/product_page.dart';
 // import 'package:shamo_flutter/theme.dart';
 
 // ignore: use_key_in_widget_constructors
 class MovieTile extends StatelessWidget {
-  // final ProductModel product;
-  // ProductTile(this.product);
+  final MovieModel movie;
+  // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
+  MovieTile(this.movie);
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +27,11 @@ class MovieTile extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child:
-                  // Image.network(
-                  //   product.galleries[0].url,
-                  Image.asset(
-                'assets/black_adam.jpg',
+              child: Image.network(
+                movie.poster_path,
+
+                //   Image.asset(
+                // 'assets/black_adam.jpg',
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
