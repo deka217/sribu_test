@@ -46,8 +46,8 @@ class MovieTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    // product.category.name,
-                    'Black Adam',
+                    movie.original_title,
+                    // 'Black Adam',
                     style: secondaryTextStyle.copyWith(
                       fontSize: 12,
                     ),
@@ -57,8 +57,8 @@ class MovieTile extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    // product.name,
-                    'Black Adam',
+                    movie.original_title,
+                    // 'Black Adam',
                     style: primaryTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: semiBold,
