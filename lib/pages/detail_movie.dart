@@ -2,17 +2,17 @@
 
 // import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-// import 'package:provider/provider.dart';
-// import 'package:shamo/models/product_model.dart';
-// import 'package:shamo/pages/detail_chat_page.dart';
+import 'package:provider/provider.dart';
+import 'package:sribu_test/models/movie_model.dart';
 // import 'package:shamo/providers/cart_provider.dart';
 // import 'package:shamo/providers/wishlist_provider.dart';
 import 'package:sribu_test/theme.dart';
 
 // ignore: use_key_in_widget_constructors
 class DetailMovie extends StatefulWidget {
-  // final ProductModel product;
-  // ProductPage(this.product);
+  final MovieModel movie;
+  // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
+  DetailMovie(this.movie);
 
   @override
   // ignore: library_private_types_in_public_api
@@ -324,7 +324,8 @@ class _DetailMovieState extends State<DetailMovie> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Price starts from',
+                    // 'Price starts from',
+                    widget.movie.original_title,
                     style: primaryTextStyle,
                   ),
                   // Text(
@@ -358,13 +359,13 @@ class _DetailMovieState extends State<DetailMovie> {
                   SizedBox(
                     height: 12,
                   ),
-                  // Text(
-                  //   widget.product.description,
-                  //   style: subtitleTextStyle.copyWith(
-                  //     fontWeight: light,
-                  //   ),
-                  //   textAlign: TextAlign.justify,
-                  // ),
+                  Text(
+                    widget.movie.overview,
+                    style: subtitleTextStyle.copyWith(
+                      fontWeight: light,
+                    ),
+                    textAlign: TextAlign.justify,
+                  ),
                 ],
               ),
             ),

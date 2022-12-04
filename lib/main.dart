@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => SplashPage(),
           // ignore: prefer_const_constructors
           '/home': (context) => MainPage(),
-          '/movie': (context) => DetailMovie(),
+          // '/movie': (context) => DetailMovie(),
           // ignore: prefer_const_constructors
           '/homee': (context) => HomePagee()
         },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sribu_test/pages/detail_movie.dart';
 import 'package:sribu_test/theme.dart';
 import 'package:sribu_test/models/movie_model.dart';
 // import 'package:shamo/pages/product_page.dart';
@@ -14,7 +15,13 @@ class MovieTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/movie');
+        // Navigator.pushNamed(context, '/movie');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailMovie(movie),
+          ),
+        );
       },
       child: Container(
         margin: EdgeInsets.only(
