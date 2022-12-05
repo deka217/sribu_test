@@ -43,7 +43,9 @@ class MovieCard extends StatelessWidget {
             height: 30,
           ),
           // Image.network(
-          //   movie.poster_path,
+          // ('https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg'),
+          // movie.base_url + movie.size + movie.poster_path,
+          // ('https://picsum.photos/250?image=9'),
           Image.asset(
             'assets/black_adam.jpg',
             width: 215,
@@ -69,8 +71,8 @@ class MovieCard extends StatelessWidget {
                 height: 6,
               ),
               Text(
-                // product.name,
-                'COURT VISION 2.0',
+                movie.title,
+                // 'COURT VISION 2.0',s
                 style: blackTextStyle.copyWith(
                   fontSize: 18,
                   fontWeight: semiBold,

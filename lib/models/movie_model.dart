@@ -7,6 +7,10 @@ class MovieModel {
   late String overview;
   late String poster_path;
   late String release_date;
+  late String title;
+  late String base_url = 'https://image.tmdb.org/t/p/';
+  late String size = 'w500';
+  // late String popularity;
   // late String token;
 
   MovieModel({
@@ -16,6 +20,10 @@ class MovieModel {
     required this.overview,
     required this.poster_path,
     required this.release_date,
+    required this.title,
+    required this.base_url,
+    required this.size,
+    // required this.popularity,
     // required this.token,
   });
 
@@ -26,6 +34,11 @@ class MovieModel {
     overview = json['overview'];
     poster_path = json['poster_path'];
     release_date = json['release_date'];
+    title = json['title'];
+    base_url = json['base_url'];
+    size = json['size'];
+    // popularity = json['popularity'];
+    // token = json['token'];
   }
 
   Map<String, dynamic> toJson() {
@@ -36,6 +49,10 @@ class MovieModel {
       'overview': overview,
       'poster_path': poster_path,
       'release_date': release_date,
+      'title': title,
+      'base_url': base_url,
+      'size': size,
+      // 'popularity': popularity,
       // 'token': token,
     };
   }

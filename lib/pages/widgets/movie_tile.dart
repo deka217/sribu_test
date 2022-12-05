@@ -34,12 +34,13 @@ class MovieTile extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child:
-                  // Image.network(
-                  //   movie.poster_path,
+              child: Image.network(
+                //   ('https://image.tmdb.org/t/p/w500/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg'),
+                movie.base_url + movie.size + movie.poster_path,
+                // ('https://picsum.photos/250?image=9'),
 
-                  Image.asset(
-                'assets/black_adam.jpg',
+                //   Image.asset(
+                // 'assets/black_adam.jpg',
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
@@ -54,7 +55,7 @@ class MovieTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    movie.original_title,
+                    movie.title,
                     // 'Black Adam',
                     style: secondaryTextStyle.copyWith(
                       fontSize: 12,
@@ -84,6 +85,15 @@ class MovieTile extends StatelessWidget {
                       fontWeight: medium,
                     ),
                   ),
+                  // Text(
+                  //   movie.title +
+                  //       movie.original_language +
+                  //       movie.original_title,
+                  //   // '2022-10-19',
+                  //   style: priceTextStyle.copyWith(
+                  //     fontWeight: medium,
+                  //   ),
+                  // ),
                 ],
               ),
             ),

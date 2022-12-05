@@ -234,8 +234,8 @@ class HomePage extends StatelessWidget {
                 (movie) => MovieTile(movie),
               )
               .toList(),
-          // [
-          // MovieTile(),
+          //  children: [
+          //   MovieTile(),
           //   MovieTile(),
           //   MovieTile(),
           //   MovieTile(),
